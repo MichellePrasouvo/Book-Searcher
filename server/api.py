@@ -1,12 +1,5 @@
-from flask import Flask
 import json 
 from urllib.request import urlopen
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello, World!"
 
 while True:
 
