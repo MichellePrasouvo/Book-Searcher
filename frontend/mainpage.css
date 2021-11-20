@@ -1,19 +1,19 @@
 html {
-	background-image: url(pastel.png);
+	background-image: url(black.jpg);
 	
 }
 h1 {
 	text-align: center;
 	font-size: 4em;
 	font-family: 'Fredoka One', cursive;
-	color: black;
+	color: #ccccff;
 	margin-top: 30px;
 }
 
 h2 {
 	font-family: 'Source Code Pro', monospace;
 	text-align: center;
-	color: black;
+	color: #ccccff;
 	font-size: 20px;
 	line-height: 5px;
 	margin-top: -30px;
