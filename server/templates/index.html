@@ -4,7 +4,7 @@
 <head>
     <title>Look for a Book</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='mainpage.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Source+Code+Pro:wght@200;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,12 +23,12 @@
         <div class="left-half">
             <article>
                 <div class="flex-container">
-                    <div>{{book_l[i][ "title"]}}</div>
-                    <div>{{book_l[i]['authors']}}</div>
-                    <div>{{book_l[i]["averageRating"]}}</div>
-                    <div>{{book_l[i]["description"]}}</div>
-                    <div>{{book_l[i][ "pageCount"]}}</div>
-                    <div>{{book_l[i][ "publishedDate"]}}</div>
+                    <div>Title: {{book_l[i]["title"]}}</div>
+                    <div>Author: {{book_l[i]['authors']}}</div>
+                    <div>Rating: {{book_l[i]["averageRating"]}}</div>
+                    <div>Synopsis: {{book_l[i]["description"]}}</div>
+                    <div>Page Count: {{book_l[i][ "pageCount"]}}</div>
+                    <div>Published Date: {{book_l[i][ "publishedDate"]}}</div>
                 </div>
 
             </article>

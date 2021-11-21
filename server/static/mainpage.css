@@ -16,7 +16,7 @@ h1 {
     font-size: 4em;
     font-family: 'Fredoka One', cursive;
     color: #ffffff;
-    padding-top: 75px;
+    padding-top: 30px;
 }
 
 h2 {
@@ -44,6 +44,7 @@ form {
 input {
     all: unset;
     font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
     font: 30px;
     color: #000000;
     height: 100%;
@@ -77,17 +78,24 @@ button {
 
 .container {
     display: flex;
+    margin: auto;
+    margin-top: 100px;
+    width: 85vw;
 }
 
 .flex-container>div {
-    background-color: #f1f1f1;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font: 30px;
+    color: #000000;
     margin: 10px;
     padding: 20px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .left-half {
     background-color: #ccccff;
+    border-radius: 5px 0px 0px 5px;
     flex: 1;
     padding: 1rem;
     font: 15px;
@@ -95,6 +103,7 @@ button {
 
 .right-half {
     background-color: #ccccff;
+    border-radius: 0px 5px 5px 0px;
     flex: 1;
     padding: 1rem;
     font: 15px
