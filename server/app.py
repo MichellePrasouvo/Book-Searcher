@@ -22,6 +22,7 @@ def home():
     for key in key_list:
         if key in book_info:
             book_dict[key] = book_info[key]
+    return book_dict
             
-    return book_dict 
+
 
