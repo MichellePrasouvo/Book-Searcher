@@ -1,10 +1,12 @@
 from flask import Flask
 from flask import request
 from urllib.request import urlopen
-# from flask_cors import CORS 
+from flask_cors import CORS 
 import json 
 
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route("/search")
 def home():
@@ -15,18 +17,25 @@ def home():
     resp = urlopen(api + name.replace(" ", ""))
     book_data = json.load(resp)
 
-    book_info = book_data["items"][0]["volumeInfo"]
+    book_infos = []
+    for i in book_data["items"]:
+        book_info = i["volumeInfo"]
 
-    book_dict = {
-        'author': book_info["authors"][0],
-        'description': book_info['description'],
-        'page_count': book_info['pageCount'],
-        'published': book_info["publishedDate"],
-        'rating': book_info['averageRating'],
-        # 'category': book_info['categories'][0],
-        'title':  name,
-        'image': book_info['imageLinks']['thumbnail']
-    }
+        book_dict = {}
+        key_list = ['authors', 'pageCount', "publishedDate", 'averageRating', 'title', 'description', "imageLinks"]
+        for key in key_list:
+            if key in book_info:
+                book_dict[key] = book_info[key]
+            else:
+                book_dict[key] = ''
 
-    return book_dict 
+        if 'authors' in book_dict:
+            book_dict['authors'] = book_dict['authors'][0]
+        if 'imageLinks' in book_dict:
+            book_dict['imageLinks'] = book_dict['imageLinks']['thumbnail']
+        book_infos.append(book_dict)
+    result = {'results': book_infos}
+    return result
+            
+
 
