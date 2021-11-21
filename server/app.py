@@ -18,7 +18,7 @@ def home():
     book_info = book_data["items"][0]["volumeInfo"]
 
     book_dict = {}
-    key_list = ['authors', 'pageCount', "publishedDate", 'averageRating', 'title' ]
+    key_list = ['authors', 'pageCount', "publishedDate", 'averageRating', 'title', 'description']
     for key in key_list:
         if key in book_info:
             book_dict[key] = book_info[key]
