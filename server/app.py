@@ -17,16 +17,11 @@ def home():
 
     book_info = book_data["items"][0]["volumeInfo"]
 
-    book_dict = {
-        'author': book_info["authors"][0],
-        'description': book_info['description'],
-        'page_count': book_info['pageCount'],
-        'published': book_info["publishedDate"],
-        'rating': book_info['averageRating'],
-        'category': book_info['categories'][0],
-        'title':  name,
-        'image': book_info['imageLinks']['thumbnail']
-    }
-
+    book_dict = {}
+    key_list = ['authors', 'pageCount', "publishedDate", 'averageRating', 'title' ]
+    for key in key_list:
+        if key in book_info:
+            book_dict[key] = book_info[key]
+            
     return book_dict 
 
