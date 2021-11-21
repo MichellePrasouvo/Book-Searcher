@@ -6,7 +6,7 @@ const site = 'pagedart.com';
 function submitted(event) {
     event.preventDefault();
     book_name = q.value
-    newurl = "http://127.0.0.1:5000/search?name=" + book_name
+    newurl = "https://findabook.herokuapp.com/search?name=" + book_name
         // fetch(newurl)
         //     .then(response => response.json())
         //     .then(data => console.log(data));
