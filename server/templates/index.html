@@ -19,14 +19,28 @@
             </button>
     </form>
     {%for i in range(0, len)%}
+    <section class="container">
+        <div class="left-half">
+            <article>
+                <div class="flex-container">
+                    <div>{{book_l[i][ "title"]}}</div>
+                    <div>{{book_l[i]['authors']}}</div>
+                    <div>{{book_l[i]["averageRating"]}}</div>
+                    <div>{{book_l[i]["description"]}}</div>
+                    <div>{{book_l[i][ "pageCount"]}}</div>
+                    <div>{{book_l[i][ "publishedDate"]}}</div>
+                </div>
 
-    <li>{{book_l[i]['authors']}}</li>
-    <li>{{book_l[i]["averageRating"]}}</li>
-    <li>{{book_l[i]["description"]}}</li>
-    <img src="{{book_l[i]['imageLinks']}}"></img>
-    <li>{{book_l[i][ "pageCount"]}}</li>
-    <li>{{book_l[i][ "publishedDate"]}}</li>
-    <li>{{book_l[i][ "title"]}}</li>
+            </article>
+        </div>
+        <div class="right-half">
+            <article>
+                <h1><img src="{{book_l[i]['imageLinks']}}"></img>
+                </h1>
+            </article>
+        </div>
+    </section>
+
     {%endfor%}
     <script src="{{url_for('static', filename='searchbar.js')}}"></script>
 </body>
