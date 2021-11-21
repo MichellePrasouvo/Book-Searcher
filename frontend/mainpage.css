@@ -1,45 +1,47 @@
-html, body {
-    height: 110vh;
+html {
+    height: 100vh;
     overflow-y: hidden;
-  }
+}
 
 body {
     background-size: cover;
     background-image: linear-gradient(#9999ff, #ccccff);
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+}
 
-  }
 h1 {
-	text-align: center;
-	font-size: 4em;
-	font-family: 'Fredoka One', cursive;
-	color: #ffffff;
-	padding-top: 75px;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    padding-top: 75px;
 }
 
 h2 {
-	font-family: 'Source Code Pro', monospace;
-	text-align: center;
-	color: #ffffff;
-	font-size: 20px;
-	line-height: 5px;
-	margin-top: -30px;
-
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 5px;
+    margin-top: -30px;
 }
 
-  form {
+form {
     background-color: #ccccff;
     width: 85vw;
     height: 44px;
     border-radius: 5px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 20px;
     margin: auto;
     margin-top: 50px;
-  }
+}
 
-  input {
+input {
     all: unset;
     font-family: 'Source Code Pro', monospace;
     font: 30px;
@@ -47,26 +49,28 @@ h2 {
     height: 100%;
     width: 100%;
     padding: 6px 10px;
-  }
+}
 
-  ::placeholder {
+ ::placeholder {
     color: #000000;
     opacity: 0.7;
+}
 
-  }
-
-  svg {
+svg {
     color: #000000;
     fill: currentColor;
     width: 24px;
     height: 24px;
     padding: 10px;
-  }
+}
 
-  button {
+button {
     all: unset;
     cursor: pointer;
     width: 44px;
     height: 44px;
+}
 
-  }
+#test1 {
+    height: 5000px;
+}
