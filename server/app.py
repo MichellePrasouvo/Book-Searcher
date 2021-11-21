@@ -1,10 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask import request
 from urllib.request import urlopen
-# from flask_cors import CORS 
+from flask_cors import CORS 
 import json 
 
 app = Flask(__name__)
+CORS(app)
+
+@app.route('/', methods=['GET', 'POST'])
+def home2():
+   return render_template('index.html', len = 0, book_l=[])
 
 @app.route("/search")
 def home():
@@ -29,11 +34,11 @@ def home():
 
         if 'authors' in book_dict:
             book_dict['authors'] = book_dict['authors'][0]
-        if 'imageLinks' in book_dict:
+        if 'imageLinks' in book_dict and 'thumbnail' in book_dict['imageLinks']:
             book_dict['imageLinks'] = book_dict['imageLinks']['thumbnail']
         book_infos.append(book_dict)
     result = {'results': book_infos}
-    return result
+    return render_template('index.html', len = len(book_infos), book_l=book_infos)
             
 
 
