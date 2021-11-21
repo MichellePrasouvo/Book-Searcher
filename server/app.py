@@ -23,7 +23,7 @@ def home():
         'page_count': book_info['pageCount'],
         'published': book_info["publishedDate"],
         'rating': book_info['averageRating'],
-        'category': book_info['categories'][0],
+        # 'category': book_info['categories'][0],
         'title':  name,
         'image': book_info['imageLinks']['thumbnail']
     }
